@@ -1,0 +1,396 @@
+/* =========================================
+   GENERAL PAGE SETTINGS
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e293b
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.lock-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.header h1 {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.header p {
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   PASSWORD INPUT
+========================================= */
+
+.password-section {
+    margin-bottom: 25px;
+}
+
+
+.password-section label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.password-input {
+    display: flex;
+
+    align-items: center;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.2s;
+}
+
+
+.password-input:focus-within {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+
+.password-input input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 14px;
+
+    font-size: 16px;
+}
+
+
+.password-input button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    padding: 10px 14px;
+}
+
+
+/* =========================================
+   STRENGTH SECTION
+========================================= */
+
+.strength-section {
+    margin-bottom: 25px;
+}
+
+
+.strength-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+
+#strengthText {
+    color: #64748b;
+}
+
+
+/* Strength meter background */
+
+.strength-meter {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+/* Strength meter */
+
+.strength-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.score {
+
+    margin-top: 8px;
+
+    text-align: right;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   REQUIREMENTS
+========================================= */
+
+.requirements {
+
+    margin-bottom: 25px;
+}
+
+
+.requirements h2,
+.suggestions h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.requirement {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    transition: 0.2s;
+}
+
+
+.check {
+
+    width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* Requirement when satisfied */
+
+.requirement.valid {
+
+    color: #15803d;
+
+}
+
+
+.requirement.valid .check {
+
+    background: #dcfce7;
+
+    color: #16a34a;
+}
+
+
+/* =========================================
+   SUGGESTIONS
+========================================= */
+
+.suggestions {
+
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.suggestions ul {
+
+    padding-left: 20px;
+
+}
+
+
+.suggestions li {
+
+    margin-bottom: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   SECURITY NOTICE
+========================================= */
+
+.security-notice {
+
+    background: #eff6ff;
+
+    border-left: 4px solid #2563eb;
+
+    padding: 15px;
+
+    border-radius: 8px;
+}
+
+
+.security-notice strong {
+
+    color: #1d4ed8;
+
+}
+
+
+.security-notice p {
+
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 550px) {
+
+    .container {
+
+        padding: 25px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 24px;
+
+    }
+
+}

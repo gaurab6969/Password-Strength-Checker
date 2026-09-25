@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Checker</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h1>Password Strength Checker</h1>
+
+            <p>
+                Check your password strength and improve your security.
+            </p>
+
+        </div>
+
+
+        <!-- Password Input Section -->
+        <div class="password-section">
+
+            <label for="password">
+                Enter your password
+            </label>
+
+            <div class="password-input">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="togglePassword"
+                    aria-label="Show password"
+                >
+                    👁
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Strength Section -->
+        <div class="strength-section">
+
+            <div class="strength-header">
+
+                <span>Strength</span>
+
+                <span id="strengthText">
+                    Very Weak
+                </span>
+
+            </div>
+
+
+            <!-- Strength Meter -->
+            <div class="strength-meter">
+
+                <div
+                    id="strengthBar"
+                    class="strength-bar"
+                ></div>
+
+            </div>
+
+            <div class="score">
+                Score:
+                <span id="scoreText">0/10</span>
+            </div>
+
+        </div>
+
+
+        <!-- Requirements -->
+        <div class="requirements">
+
+            <h2>Password Requirements</h2>
+
+            <div
+                id="lengthRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                At least 8 characters
+            </div>
+
+
+            <div
+                id="longRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                At least 12 characters
+            </div>
+
+
+            <div
+                id="lowercaseRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                Lowercase letter
+            </div>
+
+
+            <div
+                id="uppercaseRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                Uppercase letter
+            </div>
+
+
+            <div
+                id="numberRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                Number
+            </div>
+
+
+            <div
+                id="specialRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                Special character
+            </div>
+
+
+            <div
+                id="veryLongRequirement"
+                class="requirement"
+            >
+                <span class="check">✕</span>
+                At least 16 characters
+            </div>
+
+        </div>
+
+
+        <!-- Suggestions -->
+        <div class="suggestions">
+
+            <h2>💡 Suggestions</h2>
+
+            <ul id="suggestionsList">
+
+                <li>
+                    Enter a password to receive security suggestions.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Security Notice -->
+        <div class="security-notice">
+
+            <strong>🛡️ Security Tip</strong>
+
+            <p>
+                Never reuse passwords across important accounts.
+                Use a password manager when possible.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
